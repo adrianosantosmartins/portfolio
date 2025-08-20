@@ -120,6 +120,7 @@ span{
 .home-content p, .about-content p{
     margin-top: 1.2rem;
     text-align: justify;
+    text-indent: 25px;
 }
 .services h2, .portfolio h2, .contact h2{
     font-size: 2.2rem;

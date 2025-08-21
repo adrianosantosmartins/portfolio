@@ -198,38 +198,55 @@ span{
 }
 .porfolio{
     background-color: var(--color-02);
+    padding: 40px;
 }
 .portfolio-container{
-    display: grid;
-    gap: 1.2rem;/*afastamento entre conteudo dessa section*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9rem;
+    justify-content: center;
+    margin: auto;
 }
 .portfolio-box{
+    flex: 1 1 45%;
     position: relative;
     border-radius: 0.6rem;
     box-shadow: 0 0 0.6rem var(--bg-color-01);
     overflow: hidden; 
-    display:flex;
+    display: flex;  
+    border: solid var(--main-color) 2px;
+    min-width: 280px;
+    max-width: 700px;
+    min-height: 500px;
     
 }
 .portfolio-box .portfolio-layer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: max-content;
     height: 100%;
-    background: linear-gradient(transparent 60%, var(--main-color));
+    background-image: linear-gradient(transparent 60%, var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 700px;    
     text-align: center;
     padding: 0 4rem;
     transform: translateY(30rem);
     transition: 0.5s ease;
 }
-.portfolio-box:hover .portfolio-layer{
-    transform: translateY(0);
+/*.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);}*/
+#lulu{
+    min-width: fit-content;
 }
+#cordel{
+    min-width: fit-content;
+    overflow: auto;
+    gap: 20px;    
+}
+
 .portfolio-layer h4{
     font: 1.8rem;
     padding-left: 500px;
@@ -255,10 +272,12 @@ span{
     font-size: 1.2rem;
     color: var(--color-02);
 }
-.portfolio-container h2{
+.porfolio h2{
     text-align: center;
-    
+    display: block;
+    padding-bottom: 40px;
 }
+
 form{
     max-width: 45rem;
     margin: 0.6 auto;
@@ -382,10 +401,15 @@ footer{
     }
     .services-box{
         width: 100%;
+        
     }
     header{
         /* background-color: var(--color-05);TESTE */
     }
+    .portfolio-box{
+        max-width: fit-content;
+    }
+    
 }
 /*  Small Portrait(SM) Smartphone(Landscape)*/
 
@@ -395,6 +419,9 @@ footer{
     }
     .services-box{
         width: 70%;
+    }
+    .portfolio-box{
+        max-width: fit-content;
     }
    
 }
@@ -431,6 +458,7 @@ footer{
     header{
         /* background-color: var(--color-04);TESTE */
     }
+
 }
 /*  large (lg) notebook */
 
@@ -447,6 +475,13 @@ footer{
     header{
         /* background-color: var(--main-color);TESTE */
     }
+    .portfolio-container{
+        grid-template-columns: auto;
+    }
+    .services-box{
+        width: 70%;
+    }
+    
 }
     /*  extralarge (xl) desktop */
 
@@ -454,6 +489,8 @@ footer{
     header{
         /* background-color: var(--color-01);TESTE */
     }
+    
+    
 }
 
 
